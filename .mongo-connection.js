@@ -1,0 +1,1 @@
+module.exports = 'mongodb+srv://mhr2964:eXcaliber375%3B@cluster0.5m9du.mongodb.net/DomoMaker';
