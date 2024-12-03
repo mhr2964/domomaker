@@ -35,10 +35,10 @@
     "connect-redis": "^7.1.1",
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
-    "express-session": "^1.18.0",
+    "express-session": "^1.18.1",
     "helmet": "^7.1.0",
     "mongoose": "^8.2.3",
-    "redis": "^4.6.13",
+    "redis": "^4.7.0",
     "serve-favicon": "^2.5.0",
     "underscore": "^1.13.6"
   }

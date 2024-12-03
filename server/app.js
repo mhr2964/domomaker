@@ -17,13 +17,14 @@ const expressHandlebars = require('express-handlebars');
 // helmet : security library for express
 const helmet = require('helmet');
 const session = require('express-session');
-
+const RedisStore = require('connect-redis');
+const redis = require('redis');
 // router.js import for mvc
 const router = require('./router.js');
 
 // connecting to a mongodb address.
 // either the one we made in Heroku or a fallback here
-const dbURI = process.env.MONGODB_URI || require('../.mongo-connection.js');
+const dbURI = process.env.MONGODB_URI || require('');
 
 // Connect called here.
 mongoose.connect(dbURI).catch((err) => {
