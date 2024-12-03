@@ -16,6 +16,7 @@ const mongoose = require('mongoose');
 const expressHandlebars = require('express-handlebars');
 // helmet : security library for express
 const helmet = require('helmet');
+const session = require('express-session');
 
 // router.js import for mvc
 const router = require('./router.js');
@@ -57,6 +58,13 @@ app.use(compression());
 
 // // parse json body requests
 // app.use(bodyParser.json());
+
+app.use(session({
+  key: 'sessionid',
+  secret: 'Domo Arigato',
+  resave: false,
+  saveUninitialized: false,
+}));
 
 // set up handlebars and then set it as our view engine
 app.engine('handlebars', expressHandlebars.engine({ defaultLayout: '' }));
